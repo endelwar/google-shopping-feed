@@ -81,9 +81,9 @@ class Node
     }
 
     /**
-     * @param Node $parent
+     * @param \SimpleXMLElement $parent
      */
-    public function attachNodeTo(Node $parent)
+    public function attachNodeTo(\SimpleXMLElement $parent)
     {
         if ($this->cdata && !preg_match("#^<!\[CDATA#is", $this->value)) {
             $this->value = "<![CDATA[{$this->value}]]>";
